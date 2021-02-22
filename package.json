@@ -1,5 +1,5 @@
 {
-    "name": "TradingAlerts",
+    "name": "discord-trading-alerts-bot",
     "description": "Discord bot for trading alerts",
     "version": "1.0.0",
     "main": "bot.js",
@@ -7,7 +7,6 @@
         "start": "node bot.js"
     },
     "dependencies": {
-        "discord.js": "12.5.1",
-        "request": "2.81.0"
+        "discord.js": "^12.5.1"
     }
 }
