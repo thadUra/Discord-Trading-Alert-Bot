@@ -11,4 +11,4 @@ client.on('message', message => {
         message.reply('pong');
     }
 });
-client.login(process.env.EN5RZ_Q-rdQQGzdtKkEF33nby_2EzBcj);
+client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
