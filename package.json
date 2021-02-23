@@ -1,0 +1,22 @@
+{
+  "name": "discord-trading-alert-bot",
+  "version": "1.0.0",
+  "description": "discord bot for trading alerts on signals&profits discord server.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaddziura/Discord-Trading-Alert-Bot.git"
+  },
+  "author": "thaddyD#003",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaddziura/Discord-Trading-Alert-Bot/issues"
+  },
+  "homepage": "https://github.com/thaddziura/Discord-Trading-Alert-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
