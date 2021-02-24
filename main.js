@@ -338,6 +338,5 @@ client.on('message', (message) => {
     message.delete().catch(console.error); // deletes user command after everything
 });
 
-
 // Client login
-client.login('ODEzMjk2MzU3Mjk3MjI1NzQ0.YDNPQQ.2vg779Gdvh84QakK0tFGTmHF8kM');
+client.login(process.env.BOT_TOKEN);
