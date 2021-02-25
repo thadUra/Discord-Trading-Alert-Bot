@@ -308,7 +308,8 @@ client.on('message', (message) => {
         }
     }
 
-    if ( cmd_name.toLowerCase() === 'delete' || cmd_name.toLowerCase() === 'del' ) { // deletes bot message
+    if ( cmd_name.toLowerCase() === 'delete' || cmd_name.toLowerCase() === 'del' ) { 
+        // deletes bot message
         // Updating JSON data file with deleted trade
         try {
             alertJSON = JSON.parse(fs.readFileSync('./alert.json', 'utf8'));
@@ -334,6 +335,37 @@ client.on('message', (message) => {
             console.error(err);
         }
     }
+
+    if ( cmd_name.toLowerCase() === 'wipe' || cmd_name.toLowerCase() === 'wi' ) { 
+        // hard wipes bot message from message ID
+        try {
+            client.channels.cache.get(message.channel.id).messages.fetch(args[0])
+                .then(message => message.delete())
+                .catch((err) => {
+                    console.error(err);
+                    message.channel.send(new Discord.MessageEmbed()
+                        .setColor('#00ff88')
+                        .setTitle('Error: inputted invalid command or arguments')
+                        .setDescription('*Deleting in 5 seconds...*'))
+                        .then(msg => msg.delete({timeout: 5000}));
+                    });
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    if ( cmd_name.toLowerCase() === 'list' || cmd_name.toLowerCase() === 'li' ) { 
+        // Lists all trades in console for puny database management
+        try {
+            alertJSON = JSON.parse(fs.readFileSync('./alert.json', 'utf8'));
+            console.log(fs.readFileSync('./alert.json', 'utf8'));
+            var json = JSON.stringify(alertJSON); 
+            fs.writeFile('alert.json', json, () => {} ); 
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
 
     message.delete().catch(console.error); // deletes user command after everything
 });
