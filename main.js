@@ -209,7 +209,7 @@ client.on('message', (message) => {
                                 { name: 'Ticker', value: ticker },
                                 { name: 'Purchase Price', value: price, inline: true },
                                 { name: 'Close Price', value: exitPrice, inline: true },
-                                { name: 'P/L %', value: `${(exitPrice/price-1).toFixed(2)*100}%`, inline: true },
+                                { name: 'P/L %', value: `${((exitPrice/price-1)*100).toFixed(2)}%`, inline: true },
                                 { name: 'Analysis', value: args.slice(analysisSliceInt).join(' ') }
                             )
                             .setImage(imageLink)
@@ -229,7 +229,7 @@ client.on('message', (message) => {
                                 { name: 'Expiration', value: exp, inline: true },
                                 { name: 'Purchase Price', value: price, inline: true },
                                 { name: 'Close Price', value: exitPrice, inline: true },
-                                { name: 'P/L %', value: `${(exitPrice/price-1).toFixed(2)*100}%`, inline: true },
+                                { name: 'P/L %', value: `${((exitPrice/price-1)*100).toFixed(2)}%`, inline: true },
                                 { name: 'Analysis', value: args.slice(analysisSliceInt).join(' ') }
                             )
                             .setImage(imageLink)
