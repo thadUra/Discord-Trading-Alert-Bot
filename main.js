@@ -349,6 +349,7 @@ client.on('message', (message) => {
                         .setDescription('*Deleting in 5 seconds...*'))
                         .then(msg => msg.delete({timeout: 5000}));
                     });
+            console.log(`Wiped out comment by ID: ${args[0]}`)
         } catch (err) {
             console.error(err);
         }
