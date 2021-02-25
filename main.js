@@ -367,7 +367,6 @@ client.on('message', (message) => {
         }
     }
 
-
     message.delete().catch(console.error); // deletes user command after everything
 });
 
