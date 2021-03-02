@@ -18,6 +18,7 @@
   "homepage": "https://github.com/thaddziura/Discord-Trading-Alert-Bot#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "dotenv": "^3.0.0"
+    "dotenv": "^3.0.0",
+    "quickchart-js": "^1.0.6"
   }
 }
