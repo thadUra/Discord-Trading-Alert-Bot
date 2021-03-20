@@ -1,5 +1,5 @@
 // Initializing client and environment vars
-const { Discord, MessageAttachment} = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const { prefix, analystRole, ownerRole } = require('./config.json');
 const { listAlerts } = require('./alert.json');
@@ -564,8 +564,7 @@ client.on('message', (message) => {
 
     if ( cmd_name.toLowerCase() === 'file' || cmd_name.toLowerCase() === 'fi' ) {
         try {
-            const attachment = new MessageAttachment('./alert.json');
-            message.channel.send(attachment);
+            message.channel.send('**~ List of Trades via JSON ~**', { files: ['./alert.json'] });
         } catch (err) {
             console.error(err);
         }
