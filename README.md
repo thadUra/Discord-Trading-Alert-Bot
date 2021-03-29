@@ -1,6 +1,6 @@
 # Discord-Trading-Alert-Bot
 
-Discord bot made with the discord.js library:
+Discord bot made with the discord.js library in node.js:
   - reads commands from text channels using prefix
   - displays trading alerts for opening and closing trades
   - alerts compatible for stocks, options, and futures trades
