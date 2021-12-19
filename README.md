@@ -7,4 +7,4 @@ Discord bot made with the discord.js library in node.js:
   - other features and implications include:
     - scaling in and out of positions
     - storing all trades inside JSON database
-    - recap function graphing P/L for all closed trades on the same day
+    - recap function graphing P/L for all closed trades on the same day using QuickChart API
